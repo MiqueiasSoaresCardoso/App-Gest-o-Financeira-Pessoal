@@ -1,46 +1,44 @@
 package br.com.dispositivosmoveis.gestorfinanceiropessoal
 
+import Home
+import Login
+import New_cont
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import br.com.dispositivosmoveis.gestorfinanceiropessoal.ui.theme.GestorFinanceiroPessoalTheme
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            GestorFinanceiroPessoalTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
+            // Configurando o Navigation
+            /* a nossa variavel abaixo estará herdando de NavHostController que é quem permite a navegação
+            entre telas*/
+                    val navController = rememberNavController()
+                                                                    //Id da minha tela
+                    NavHost(navController = navController, startDestination = "Login"){
+                        composable(
+                            route = "Login"
+                        ){
+                            //Tela de Inicio
+                            Login(navController)
+                        }
+                        composable(
+                            route="Home"
+                        ){
+                            Home(navController)
+                        }
+                        composable(
+                            route="New_Count"
+                        ){
+                            New_cont(navController)
+                        }
+                    }
                 }
             }
         }
-    }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    GestorFinanceiroPessoalTheme {
-        Greeting("Android")
-    }
-}
