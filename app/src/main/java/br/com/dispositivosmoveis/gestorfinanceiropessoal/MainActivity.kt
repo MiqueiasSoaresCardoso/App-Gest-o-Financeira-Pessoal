@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
             entre telas*/
                     val navController = rememberNavController()
                                                                     //Id da minha tela
-                    NavHost(navController = navController, startDestination = "Login"){
+                    NavHost(navController = navController, startDestination = "Home"){
                         composable(
                             route = "Login"
                         ){
