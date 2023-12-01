@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
                         composable(
                             route="New_Count"
                         ){
-                            New_cont(navController)
+                            New_cont()
                         }
                     }
                 }
