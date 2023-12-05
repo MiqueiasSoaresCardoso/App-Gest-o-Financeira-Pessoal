@@ -12,12 +12,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.dispositivosmoveis.gestorfinanceiropessoal.ui.theme.CorFundo
+import br.com.dispositivosmoveis.gestorfinanceiropessoal.ui.theme.GreenBase
 import br.com.dispositivosmoveis.gestorfinanceiropessoal.ui.theme.Yellow
 
 @Composable
@@ -25,6 +27,7 @@ fun ItemContaa(){
 
     Column(
         modifier = Modifier.clip(shapes.small)
+            .shadow(5.dp)
     ) {
         Row {
             Box(
@@ -37,7 +40,7 @@ fun ItemContaa(){
                 Text(
                     text= "Tarefa 01",
                     modifier = Modifier.padding(start=10.dp,bottom = 20.dp),
-                    fontSize = 20.sp,
+                    fontSize = 18.sp,
                     //color = Color.White
                     //fontWeight = FontWeight.Bold
                 );
@@ -66,7 +69,7 @@ fun ItemContaa(){
                 Text(
                     text= "Valor:",
                     modifier = Modifier.padding(start=10.dp,bottom = 20.dp),
-                    fontSize = 20.sp,
+                    fontSize = 18.sp,
                     color = Color.White
                     //fontWeight = FontWeight.Bold
                 );
@@ -83,13 +86,14 @@ fun ItemContaa(){
             }
         };
         Row(
-            modifier = Modifier.background(Color.Blue)
+            modifier = Modifier.background(GreenBase)
                 .fillMaxWidth()
                 .padding(10.dp)
+
         ) {
             Text(text = "Observaçãojjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj",
                 //fontWeight = FontWeight.Bold,
-                fontSize = 18.sp,
+                fontSize = 17.sp,
                 color = Color.White,
 
                 )

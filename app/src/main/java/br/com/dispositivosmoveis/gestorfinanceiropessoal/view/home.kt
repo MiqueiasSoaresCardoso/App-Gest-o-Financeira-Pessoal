@@ -3,8 +3,10 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -36,6 +38,7 @@ fun Home(navController: NavHostController) {
     Scaffold(
         containerColor = BlueBase,
 
+
         floatingActionButton = {
             FloatingActionButton(onClick = {
                 navController.navigate("New_Count")
@@ -59,6 +62,8 @@ fun Home(navController: NavHostController) {
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.Top,
         ) {
+            CardMoney();
+            Spacer(modifier = Modifier.height(16.dp));
             Text(text = "Lista de despesas",
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,

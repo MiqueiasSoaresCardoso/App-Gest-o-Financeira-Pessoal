@@ -56,6 +56,7 @@ fun New_cont(
         var Descricao by remember{
             mutableStateOf("")
         }
+
         //Spacer(modifier = Modifier.height(20.dp));
         Column(
             modifier = Modifier
@@ -64,11 +65,13 @@ fun New_cont(
                 .background(color = CorFundo)
                 .padding(16.dp)
                 .fillMaxWidth()
+                .clip(shapes.small)
 
             ,
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.Top,
         ) {
+            CardMoney();
             //INSERIR CARD MONEY
             Spacer(modifier = Modifier.height(16.dp));
             Column(
