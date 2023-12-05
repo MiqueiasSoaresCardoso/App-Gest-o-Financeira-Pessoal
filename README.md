@@ -1,1 +1,3 @@
-# App-Gest-o-Financeira-Pessoal
+# App-Gestão-Financeira-Pessoal
+
+Projeto Mobile 
