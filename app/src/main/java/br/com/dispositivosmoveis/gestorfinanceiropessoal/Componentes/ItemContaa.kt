@@ -18,12 +18,20 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import br.com.dispositivosmoveis.gestorfinanceiropessoal.Models.Conta
 import br.com.dispositivosmoveis.gestorfinanceiropessoal.ui.theme.CorFundo
 import br.com.dispositivosmoveis.gestorfinanceiropessoal.ui.theme.GreenBase
 import br.com.dispositivosmoveis.gestorfinanceiropessoal.ui.theme.Yellow
 
 @Composable
-fun ItemContaa(){
+fun ItemContaa(
+    posicao: Int,
+    lista: MutableList<Conta>
+){
+    val nome = lista[posicao].nome
+    val valor = lista[posicao].valor
+    val data =  lista[posicao].data
+    val descricao = lista[posicao].descricao
 
     Column(
         modifier = Modifier.clip(shapes.small)
@@ -38,7 +46,7 @@ fun ItemContaa(){
             ) {
                 // Conteúdo da parte esquerda
                 Text(
-                    text= "Tarefa 01",
+                    text= nome.toString(),
                     modifier = Modifier.padding(start=10.dp,bottom = 20.dp),
                     fontSize = 18.sp,
                     //color = Color.White
@@ -46,7 +54,7 @@ fun ItemContaa(){
                 );
 
                 Text(
-                    text = "20/04/2003",
+                    text = data.toString(),
                     modifier = Modifier
                         .padding(start=10.dp,top=30.dp,bottom=10.dp),
                     color = Color.DarkGray
@@ -75,7 +83,7 @@ fun ItemContaa(){
                 );
 
                 Text(
-                    text = "R$ 125,00",
+                    text = valor.toString(),
                     modifier = Modifier
                         .padding(start=10.dp,top=30.dp,bottom=10.dp),
                     color = Color.White
@@ -91,7 +99,7 @@ fun ItemContaa(){
                 .padding(10.dp)
 
         ) {
-            Text(text = "Observaçãojjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj",
+            Text(text = descricao.toString(),
                 //fontWeight = FontWeight.Bold,
                 fontSize = 17.sp,
                 color = Color.White,
@@ -101,8 +109,3 @@ fun ItemContaa(){
     }
 }
 
-@Composable
-@Preview
-private fun ItemContaPreview(){
-    ItemContaa();
-}

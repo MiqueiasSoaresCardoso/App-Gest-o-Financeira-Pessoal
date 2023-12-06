@@ -28,7 +28,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import br.com.dispositivosmoveis.gestorfinanceiropessoal.Componentes.Botao
-import br.com.dispositivosmoveis.gestorfinanceiropessoal.Repsository.TarefasRepository
+import br.com.dispositivosmoveis.gestorfinanceiropessoal.Repsository.Repository
 import br.com.dispositivosmoveis.gestorfinanceiropessoal.ui.theme.CorFundo
 import br.com.dispositivosmoveis.gestorfinanceiropessoal.ui.theme.GreenBase
 import kotlinx.coroutines.Dispatchers
@@ -46,7 +46,7 @@ fun New_cont(
     //Capturando o contexto para a utilização de mensagens
     val context = LocalContext.current
     //Repository
-    val Repository = TarefasRepository();
+    val Repository = Repository();
     Scaffold(
         modifier = Modifier.background(Color.Blue),
 
@@ -159,7 +159,7 @@ fun New_cont(
                     scope.launch(Dispatchers.Main ) {
                         if(mensagem){
                             Toast.makeText(context,"Conta Salva com Sucesso!",Toast.LENGTH_SHORT).show()
-                                navController.navigate("Home")
+                                
                         }else{
                             Toast.makeText(context,"Preencha todos os campos!",Toast.LENGTH_SHORT).show()
                         }

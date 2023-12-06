@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "145774315972",
+    "project_id": "gestao-pessoal-1ddd6",
+    "storage_bucket": "gestao-pessoal-1ddd6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145774315972:android:c1b151730383f0b0c1bc91",
+        "android_client_info": {
+          "package_name": "br.com.dispositivosmoveis.gestorfinanceiropessoal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXKgpGw78-dOQ-h1TJl96P4_CkL3c6kQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
