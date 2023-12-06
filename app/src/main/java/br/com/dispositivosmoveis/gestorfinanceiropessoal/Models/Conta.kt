@@ -4,5 +4,5 @@ data class Conta(
     val nome: String? = null,
     val data: String? = null,
     val valor: Float? = null,
-    val Observacao: String? = null
+    val descricao: String? = null
 )
