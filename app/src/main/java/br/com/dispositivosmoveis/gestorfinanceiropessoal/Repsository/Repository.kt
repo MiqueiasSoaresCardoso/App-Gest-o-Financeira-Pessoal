@@ -9,7 +9,7 @@ class Repository() {
     private val dataSource = DataSource();
 
     fun SalvarConta(nome:String, valor: String, data:String, descricao: String){
-        dataSource.DsalvarConta(nome,valor,data,descricao)
+        dataSource.DsalvarConta(nome,valor,data)
     }
 
     fun Listar(): Flow<MutableList<Conta>>{
