@@ -40,17 +40,17 @@ fun ItemContaa(
         Row {
             Box(
                 modifier = Modifier
-                    .background(Color.White)
+                    .background(Color.Green)
                     .weight(1f)
-                    //.fillMaxHeight()// 50% do espaço disponível
+                    .fillMaxHeight()// 50% do espaço disponível
             ) {
                 // Conteúdo da parte esquerda
                 Text(
                     text= nome.toString(),
                     modifier = Modifier.padding(start=10.dp,bottom = 20.dp),
                     fontSize = 18.sp,
-                    //color = Color.White
-                    //fontWeight = FontWeight.Bold
+                    color = Color.Red
+                    fontWeight = FontWeight.Bold
                 );
 
                 Text(
@@ -70,7 +70,7 @@ fun ItemContaa(
                     .background(Yellow)
                     .weight(1f)
                     .align(alignment = Alignment.CenterVertically)
-                    //.fillMaxHeight()// 50% do espaço disponível
+                    .fillMaxHeight()// 50% do espaço disponível
             ) {
                 // Conteúdo da parte direita
 
