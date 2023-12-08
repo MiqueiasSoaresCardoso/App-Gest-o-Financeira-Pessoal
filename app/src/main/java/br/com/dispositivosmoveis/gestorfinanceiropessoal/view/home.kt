@@ -43,13 +43,13 @@ fun Home(navController: NavHostController) {
 
     val repositorio = Repository()
     Scaffold(
-        containerColor = BlueBase,
+        containerColor = GreenBase,
 
 
         floatingActionButton = {
             FloatingActionButton(onClick = {
                 navController.navigate("New_Count")
-            }, containerColor = GreenBase, modifier = Modifier) {
+            }, containerColor = BlueBase, modifier = Modifier) {
                 // Adicionando a imagem no botão
                 Image(imageVector = ImageVector.vectorResource(R.drawable.add), contentDescription ="" )
             }
