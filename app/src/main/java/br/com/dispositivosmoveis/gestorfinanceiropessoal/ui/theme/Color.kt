@@ -16,3 +16,8 @@ val ButtonColor = Color( 0XFF244C99)
 val CorFundo = Color(0XFF4381DD)
 var Yellow = Color(0XFFE7BE2E)
 val Cinza = Color (0XFFD9D9D9)
+
+val NavyBlue = Color(0xFF001F3F)
+val Green = Color(0xFF008000)
+val Red = Color(0xFFFF0000)
+val OliveGreen = Color(0xFF808000)
